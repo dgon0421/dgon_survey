@@ -16,7 +16,9 @@
 //         })
         
         $('form').submit(function() {
-            open('https://pf.kakao.com/_xnlExfK/chat', '', '')
+            setTimeout(function(){
+                open('https://pf.kakao.com/_xnlExfK/chat', '', '')
+            },1000)
             return true; // return false to cancel form action
         });
          
