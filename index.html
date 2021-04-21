@@ -11,11 +11,14 @@
     <script src="./index.js" form="https://docs.google.com/forms/d/e/1FAIpQLSfSH20YUsIPPGolfBZp8jDm7ncLncRoYQjJdUHuegmy0u1unA/viewform?embedded=true">
     </script>
     <script>
-        $(".appsMaterialWizButtonPaperbuttonContent").click(function() {
-            form.submit();
-            open('https://pf.kakao.com/_xnlExfK/chat', '', '')
-        })
-        
+//         $(".appsMaterialWizButtonPaperbuttonContent").click(function() {
+//             form.submit();
+            
+           
+//         })
+         $("form").bind('ajax:complete', function() {
+                open('https://pf.kakao.com/_xnlExfK/chat', '', '')
+           });
         $(".freebirdFormviewerViewHeaderRequiredLegend").text("*필수사항")
         
         $(".appsMaterialWizButtonPaperbuttonLabel").text("제출")
