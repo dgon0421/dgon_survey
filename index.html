@@ -15,9 +15,10 @@
 //             open('https://pf.kakao.com/_xnlExfK/chat', '', '')
 //         })
         
-         $("form").bind('ajax:complete', function() {
-              open('https://pf.kakao.com/_xnlExfK/chat', '', '')
-         });
+        $('form').submit(function() {
+            open('https://pf.kakao.com/_xnlExfK/chat', '', '')
+            return true; // return false to cancel form action
+        });
          
         $(".freebirdFormviewerViewHeaderRequiredLegend").text("*필수사항")
         
