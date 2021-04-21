@@ -20,13 +20,21 @@
 //             return true; // return false to cancel form action
 //         });
         
+        function bb(){
+            $('form').submit(function() {
+                open('https://pf.kakao.com/_xnlExfK/chat', '', '')
+                return true; // return false to cancel form action
+            });
+        }
+        
+        
         $('.freebirdFormviewerViewHeaderRequiredLegend').unbind('submit');
         
         $(".freebirdFormviewerViewHeaderRequiredLegend").text("*필수사항")
         
         $(".appsMaterialWizButtonPaperbuttonLabel").text("제출")
         
-        $(".freebirdFormviewerViewHeaderRequiredLegend").attr("onclick","open('https://pf.kakao.com/_xnlExfK/chat', '', '');$('form').submit()")
+        $(".freebirdFormviewerViewHeaderRequiredLegend").attr("onclick","bb();")
     </script>
 </head>
 
