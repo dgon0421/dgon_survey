@@ -12,8 +12,11 @@
     </script>
     <script>
         $(".appsMaterialWizButtonPaperbuttonContent").click(function() {
-            open('https://pf.kakao.com/_xnlExfK/chat', '', '')
-            form.submit();
+            
+            form.submit(function() {
+                open('https://pf.kakao.com/_xnlExfK/chat', '', '')
+                return true; 
+            });
         })
         
         $(".freebirdFormviewerViewHeaderRequiredLegend").text("*필수사항")
