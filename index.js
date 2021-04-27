@@ -9,5 +9,14 @@
         open.call(this, method, url, async, user, pass);
     };
 })(XMLHttpRequest);
-
+(function() {
+    var script = document.currentScript ||
+        /*Polyfill*/ Array.prototype.slice.call(document.getElementsByTagName('script')).pop();
+    var URL = script.getAttribute('form');
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", URL);
+    xhr.onload = function() {
+        document.write(xhr.response);
+    };
+    xhr.send();
 })();
